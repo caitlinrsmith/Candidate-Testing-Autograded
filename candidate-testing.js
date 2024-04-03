@@ -61,11 +61,12 @@ function askQuestion() {
 
 function gradeQuiz(candidateAnswers) {
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly //
-  console.log(
-    `Your answers were ${candidateAnswers} and the correct answers were ${correctAnswers}`
-  );
+
   let grade = 0;
   for (let i = 0; i < questions.length; i++) {
+    console.log(
+      `Your answers were ${candidateAnswers[i]} and the correct answers were ${correctAnswers[i]}`
+    );
     if (correctAnswers[i].toUpperCase() === candidateAnswers[i].toUpperCase()) {
       console.log("Your answer is correct!");
       grade = grade + 20;
